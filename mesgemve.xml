@@ -1,17 +1,61 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="36" x="10" y="7">
+  <block type="oled_cleardisplay" id="105" x="-22" y="11">
     <next>
-      <block type="oled_setcursor" id="45" inline="true">
+      <block type="oled_setcursor" id="106" inline="true">
         <value name="STARTX">
-          <block type="math_number" id="53">
+          <block type="math_number" id="107">
             <field name="NUM">10</field>
           </block>
         </value>
         <value name="STARTY">
-          <block type="math_number" id="52">
+          <block type="math_number" id="108">
             <field name="NUM">10</field>
           </block>
         </value>
+        <next>
+          <block type="oled_drawtext" id="109">
+            <field name="TEXT">30+(7*6)+20</field>
+            <next>
+              <block type="oled_drawnumber" id="170" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="177" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="180">
+                        <field name="NUM">30</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_arithmetic" id="178" inline="true">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="math_number" id="181">
+                            <field name="NUM">7</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="179" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="math_number" id="182">
+                                <field name="NUM">6</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="183">
+                                <field name="NUM">20</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
