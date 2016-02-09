@@ -15,6 +15,45 @@
         <next>
           <block type="oled_drawtext" id="109">
             <field name="TEXT">30+(7*6)+20=</field>
+            <next>
+              <block type="oled_drawnumber" id="192" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="193" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="194">
+                        <field name="NUM">30</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_arithmetic" id="195" inline="true">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="math_number" id="196">
+                            <field name="NUM">7</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="197" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="math_number" id="198">
+                                <field name="NUM">6</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="199">
+                                <field name="NUM">20</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
           </block>
         </next>
       </block>
