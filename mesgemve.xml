@@ -87,7 +87,18 @@
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="multimedia_doupdate" id="463"></block>
+                                              <block type="multimedia_doupdate" id="463">
+                                                <next>
+                                                  <block type="led_select" id="473" inline="true">
+                                                    <field name="ACTION">ON</field>
+                                                    <value name="LED">
+                                                      <block type="math_number" id="476">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
                                             </next>
                                           </block>
                                         </next>
